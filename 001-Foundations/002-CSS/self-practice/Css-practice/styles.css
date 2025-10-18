@@ -1,0 +1,107 @@
+/* Asteriks digunakan untuk apply style ke semua element, dicomment dulu biar nggak ganggu yang lain*/
+/* * {
+  color: purple;
+} */
+
+/* Type selector */
+/* div{
+    color: green;
+} */
+
+/* Class selector, untuk apply css kepada element yang class nya sesuai*/
+.alert-text {
+  color: red;
+}
+
+.severe-alert {
+  font-weight: bold;
+}
+
+/* ID selector, untuk apply css kepada element yang id nya sesuai. Id cuma bisa ada di 1 element*/
+#id-selector {
+  background-color: pink;
+}
+
+/* Group selector, misal class read dan class unread mau ada property yang samaan, jadi konsepnya semua yang ada class read ATAU unread maka akan diapply.*/
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  font-style: italic;
+}
+
+.unread {
+  font-weight: 900;
+}
+
+/* Chaining Selector */
+.subsection {
+  color: blue;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.subsection.header {
+  font-style: italic;
+}
+
+/* Chaining bisa juga kombinasi class dan id */
+.subsection#sub {
+  text-decoration: underline;
+}
+
+/* Decendant Combinator, apply css khusus child yang ada di bawah parentnya*/
+.parent {
+  color: aquamarine;
+}
+
+.child {
+  font-style: italic;
+}
+
+.parent .child {
+  font-weight: bold;
+}
+
+/* Properties to Get Started with */
+.color-hex {
+  color: #1100ff;
+}
+
+.color-rgb {
+  color: rgb(100, 0, 127);
+}
+
+.color-hsl {
+  color: hsl(15, 82%, 56%);
+}
+
+.color-red-1 {
+  background-color: rgb(255, 0, 0);
+}
+
+.color-red-2 {
+  /* Kalau mau pakai persentase, perlu pakai persen di setiap parameternya */
+  background-color: rgb(50%, 0%, 0%);
+}
+
+.color-blue-alpha-1 {
+  background-color: rgb(0%, 0%, 100%, 1);
+}
+
+.color-blue-alpha-2 {
+  background-color: rgb(0%, 0%, 100%, 0.5);
+}
+
+/* Typography */
+.custom-font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: 1000;
+    text-align: center;
+}

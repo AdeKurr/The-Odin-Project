@@ -1,0 +1,23 @@
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+/* rule 1 */
+#subsection {
+  color: blue;
+  background-color: yellow;
+}
+
+/* rule 2 */
+.main #subsection{
+  color: red;
+}
+
+.alert{
+    color: red;
+}
+
+.warning{
+    color: yellow;
+}

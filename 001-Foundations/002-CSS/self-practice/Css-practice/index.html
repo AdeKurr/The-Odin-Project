@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>CSS Practice</h1>
+    <p>
+      This page is focused on practicing introduction to CSS from The Odin
+      Project.
+    </p>
+
+    <h2>Image</h2>
+    <img src="cat.jpg" alt="A fricking fat cat" height="300px" width="auto" />
+
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Cats are cute</li>
+      <li>Cats are cool</li>
+      <li>Cats are warm</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+      <li>Cats love catnip</li>
+      <li>Cats love fish</li>
+      <li>Cats love sleeping</li>
+    </ol>
+
+    <h2>Type Selector</h2>
+    <div>Hello, World!</div>
+    <div>Hello again!</div>
+    <p>Hi...</p>
+    <div>Okay, bye</div>
+
+    <h2>Asterisk (*)</h2>
+    <p>Asteriks digunakan untuk apply style ke semua element.</p>
+
+    <h2>Class Selector</h2>
+    <p>
+      Untuk apply css kepada element html yang ada pakai class sesuai
+      selectornya.
+    </p>
+    <div class="alert-text">alert-text only</div>
+    <div class="severe-alert">severe-alert only</div>
+    <div class="alert-text severe-alert">alert-text and severe-alert</div>
+
+    <h2>ID Selector</h2>
+    <p>
+      Untuk apply css kepada element html yang punya id sesuai dengan
+      selectornya. Id cuma bisa ada di 1 element per page.
+    </p>
+    <div id="id-selector">This line is using id selector.</div>
+
+    <h2>The Grouping Selector</h2>
+    <p>
+      Ketika 2 class selector memiliki property yang sama, mending digabung.
+    </p>
+    <p class="read">This message has been read.</p>
+    <p class="unread">This message has not been read.</p>
+
+    <h2>Chaining Selector</h2>
+    <p>
+      Ketika kita mau apply css ke element dengan kombinasi 2 atau lebih class
+      selector. Jadi kalo cuma pake salah satu class nya doang maka ga ke apply.
+      Chaining juga bisa dipake di kombinasi class dan id.
+    </p>
+    <p class="subsection">Subsection</p>
+    <p class="header">Header</p>
+    <p class="subsection header">Subsection header</p>
+    <p class="subsection" id="sub">Subsection with Id will be underlined.</p>
+
+    <h2>Decendant Combinator</h2>
+    <p>
+      Adalah untuk apply css ke class yang mana ada di dalam class lain. Misal
+      class .child ada di dalam class .parent, maka dengan Decendant Combinator,
+      akan apply property khusus. Lihat contoh deh!
+    </p>
+    <div class="parent">
+      <p>Hanya parent</p>
+      <div class="child">Child di dalam parent</div>
+    </div>
+    <div class="child">Hanya child</div>
+
+    <h2>Properties to Get Started with</h2>
+    <h3>Color</h3>
+    <div class="color-hex">Color Hex</div>
+    <div class="color-rgb">Color RBG</div>
+    <div class="color-hsl">Color HSL</div>
+    <div class="color-red-1">Color Red 1</div>
+    <div class="color-red-2">Color Red 2</div>
+    <div class="color-blue-alpha-1">Color blue alpha 1</div>
+    <div class="color-blue-alpha-2">Color blue alpha 2</div>
+
+    <h2>Typography</h2>
+    <div class="custom-font">Typography is the art of typing.</div>
+  </body>
+</html>
