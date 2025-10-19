@@ -1,12 +1,27 @@
-.box{
-    width: 350px;
-    height: 150px;
-    border: 5px solid red;
-    padding: 10px;
+.box {
+  width: 350px;
+  height: 150px;
+  border: 5px solid red;
+  padding: 10px;
 }
 
-.alternate{
-    box-sizing: border-box;
-    width: 380px;
-    height: 180px;
+.alternate {
+  box-sizing: border-box;
+  width: 380px;
+  height: 180px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title.sub {
+  margin-top: -20px;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  border: 3px solid green;
+  text-align: center;
 }
