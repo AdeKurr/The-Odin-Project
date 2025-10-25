@@ -1,0 +1,42 @@
+.main-title,
+.sub-title {
+  text-align: center;
+  margin: auto;
+  font-weight: bold;
+  width: 500px;
+  color: rgb(53, 53, 53);
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.container {
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+/* --- Penggunaan Float --- */
+
+.gambar-float {
+  /* 1. Mengatur agar elemen mengambang ke kiri */
+  float: left;
+
+  /* 2. Mengatur dimensi gambar */
+  width: 150px;
+  height: auto;
+
+  /* 3. Memberikan margin agar ada jarak antara gambar dan teks */
+  margin-right: 15px;
+  margin-bottom: 10px;
+
+  border: 2px solid #333;
+}

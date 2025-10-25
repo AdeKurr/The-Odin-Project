@@ -1,0 +1,9 @@
+Display property di CSS kontrol gimana elemen html tampil di page.
+
+By default, kebanyakan element html adalah block element (dengan property css {display: block}). Berarti elementnya stack atas bawah antara elemenet lain. Ga sampingan dalam 1 line. Contohnya <h1>, <p>, tiap dia di declare, dia new line.
+
+Selain block, display ada value namanya inline element. Dia nggak stack atas bawah, tapi sampingan dengan element lain. Contohnya <strong>, <em> dia kan ga new line tuh, dia ubah textnya doang tapi masih lanjut ke samping.
+
+Div & Span
+
+Sama sama gaada efek apa apa, cuma sebagai container. Bedanya div itu block, span itu inline.
