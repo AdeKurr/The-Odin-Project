@@ -86,14 +86,25 @@
   /* border: 1px solid red; */
 }
 
-.footer{
+.footer {
   display: flex; /*untuk siapin containernya biar jadi flex dan bisa ikutin flex properties lainnya.*/
   justify-content: space-between; /*untuk ratain child class dari .footer, space-between berarti antara item ada spasi, tapi antara item dan pinggir div class ini nggak ada.*/
 }
 
-.footer-item{
+.footer-item {
   border: 1px solid #fff; /*Untuk debugging, biar keliatan elementnya segede apa.*/
   background-color: #d6e9fe;
   height: 200px;
   flex: 1; /*untuk menentukan flex-item ini mengisi full ruang di flex-container. Namun misal ada beberapa flex-item dengan property flex: 1 maka dia akan bagi rata antar items (stretched equally)*/
+}
+
+.footer-one,
+.footer-three {
+  background-color: #5995da;
+  flex: initial; /*Kalo distate, dia bakal ikutin property width(dan mungkin property lain) yang distate juga.*/
+  width: 300px; /*Kalo ada property width tapi gaada flex:initial, width ini ga jalan, jadinya ikutin rule lain, yaitu flex: 1 di class header-item.*/
+}
+
+.signup{
+  margin-left: auto;
 }
