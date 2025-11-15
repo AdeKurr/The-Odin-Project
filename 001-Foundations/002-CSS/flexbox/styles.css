@@ -1,110 +1,32 @@
 * {
+  /* Untuk menyamakan default dari semua element */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .menu-container {
-  color: #ffffff;
-  background-color: #5995da;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
+  color: #fff; /*white*/
+  background-color: #5995da; /*blue*/
+  padding: 20px 0; /*atas bawah 20px, kanan kiri 0px*/
+  display: flex; /*set div ini sebagai flexbox*/
+  justify-content: center; /*setelah display:flex item, pasang justify-content untuk posisi isinya, dalam konteks ini, tengah (center)*/
 }
 
 .menu {
-  /* border: 1px solid #fff; */
+  border: 1px solid #fff; /*for debugging*/
   width: 900px;
-  display: flex;
-  justify-content: space-between;
+  display: flex; /*meskipun ini di dalem menu-container, yang berarti adalah flex item, dia juga dijadiin flex-container, makanya dipasang ini supaya bisa manipulasi flex itemnya si div .menu ini.*/
+  /* justify-content: space-around;*/ /*mengubah posisi flex items di bawah div .menu ini jadi masing-masing punya space di sekitarnya, dengan ukuran space adalah totalnya penuhin ruangan si div .menu */
+  justify-content: space-between; /*kalo ini, ngisi space antara flex item, tapi ga di sekitar itemnya, jadi tetep nempel sama border si flex-container (si div .menu) tapi ga nempel antar flex item.*/
 }
 
 .links {
-  display: flex;
-  /* border: 1p solid #fff; */
-  justify-content: flex-end;
+  display: flex; /* Karena div .links ini dipasang untuk grouping si div .signup dan .login, jadi dia perlu diubah jadi flex-container. Dengan ini, .signup dan .login akan sebelahan, bukan atas bawah lagi */
+  border: 1px solid #fff; /*for debugging, biar keliatan boxnya*/
+  justify-content: flex-end; /*Biar si .signup dan .login nempel di bagian kanan*/
 }
 
-.login {
-  margin-left: 20px;
-}
-
-.header-container {
-  color: #5995da;
-  background-color: #d6e9fe;
-  display: flex;
-  justify-content: center;
-}
-
-.header {
-  width: 900px;
-  height: 300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* .social,
-.logo,
-.subscribe {
-  border: 1px solid #5995da;
-} */
-
-.photo-grid-container {
-  display: flex;
-  justify-content: center;
-}
-
-.photo-grid {
-  /* border: 1px solid red; */
-  width: 900px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-}
-
-.photo-grid-item {
-  border: 1px solid #fff;
-  width: 300px;
-  height: 300px;
-}
-
-.first-item {
-  order: 1;
-}
-
-.last-item {
-  order: -1;
-}
-
-.subscribe,
-.social {
-  align-self: flex-end;
-  margin-bottom: 20px;
-  /* border: 1px solid red; */
-}
-
-.footer {
-  display: flex; /*untuk siapin containernya biar jadi flex dan bisa ikutin flex properties lainnya.*/
-  justify-content: space-between; /*untuk ratain child class dari .footer, space-between berarti antara item ada spasi, tapi antara item dan pinggir div class ini nggak ada.*/
-}
-
-.footer-item {
-  border: 1px solid #fff; /*Untuk debugging, biar keliatan elementnya segede apa.*/
-  background-color: #d6e9fe;
-  height: 200px;
-  flex: 1; /*untuk menentukan flex-item ini mengisi full ruang di flex-container. Namun misal ada beberapa flex-item dengan property flex: 1 maka dia akan bagi rata antar items (stretched equally)*/
-}
-
-.footer-one,
-.footer-three {
-  background-color: #5995da;
-  flex: initial; /*Kalo distate, dia bakal ikutin property width(dan mungkin property lain) yang distate juga.*/
-  width: 300px; /*Kalo ada property width tapi gaada flex:initial, width ini ga jalan, jadinya ikutin rule lain, yaitu flex: 1 di class header-item.*/
-}
-
-.signup{
-  margin-left: auto;
+.login{
+  margin-left: 20px; /*Biar ada jarak sama si .signup*/
 }
