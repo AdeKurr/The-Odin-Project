@@ -14,7 +14,7 @@
 }
 
 .menu {
-  border: 1px solid #fff; /*for debugging*/
+  /* border: 1px solid #fff; for debugging */
   width: 900px;
   display: flex; /*meskipun ini di dalem menu-container, yang berarti adalah flex item, dia juga dijadiin flex-container, makanya dipasang ini supaya bisa manipulasi flex itemnya si div .menu ini.*/
   /* justify-content: space-around;*/ /*mengubah posisi flex items di bawah div .menu ini jadi masing-masing punya space di sekitarnya, dengan ukuran space adalah totalnya penuhin ruangan si div .menu */
@@ -32,7 +32,7 @@
 }
 
 .header-container {
-  border: 4px solid pink; /*debugging, to show flex-container border*/
+  /* border: 1px solid pink; debugging, to show flex-container border */
   color: #5995da; /*font coloring*/
   background-color: #d6e9fe; /*background coloring*/
   display: flex; /*set div sebagai flex container*/
@@ -40,7 +40,7 @@
 }
 
 .header {
-  border: 4px solid brown; /*debugging, to show border*/
+  /* border: 1px solid brown; debugging, to show border */
   width: 900px; /*atur lebar container*/
   height: 300px; /*atur tinggi container*/
   display: flex; /*set jadi flex-container juga, karena masih ada isinya yang mau diatur flexnya*/
@@ -48,3 +48,67 @@
   align-items: center; /*sama kayak si justify-content tapi ini axis vertikal, ini bisa terjadi karena udah state height containernya*/
 }
 
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px; /*set lebar dari photo-grid*/
+  display: flex; /*biar element di dalamnya jadi flex ke samping*/
+  /* justify-content: flex-start; itemnya mepet ke kiri */
+  justify-content: center; /*itemnya jadi center secara horizontal*/
+  flex-wrap: wrap; /*biar items yang kelewat dari fixed width container ini jadi turun ke bawah.*/
+  /* flex-direction: column; ubah arah barisan items jadi ke bawah */
+  /* height: 600px; kalo height di-state dan ada flex-direction column, maka bakal wrap sesuai tinggi */
+  align-items: center; /*item jadi center secara vertikal. Karena ada flex-direction: column, posisi justify-content dan align-item pun tertukar*/
+  /* flex-direction: row-reverse; set barisan jadi row, dan reverse (item terakhir jadi paling awal), tapi ini cuma ubah per baris. Misal baris 1 ada 1,2,3, baris 2 ada 4,5. maka kalau row-reverse dia jadi baris 1 ada 3,2,1, baris 2 ada 5,4 */
+  flex-direction: row; /*set default jadi row lagi buat practice flex order*/
+}
+
+.photo-grid-item {
+  width: 300px; /*kebetulan nyamain ukuran gambarnya*/
+  height: 300px; /*kebetulan nyamain ukuran gambarnya*/
+}
+
+/*Order ngatur urutan item. default 0. Kalo dibawah 0 jadi pindah ke posisi awal yang 0. Kalo diatas 0 pindah setelah 0*/
+.first-item {
+  order: 1; /*Pindahin urutan setelah item yang ordernya 0*/
+}
+
+.last-item {
+  order: -1; /*pindahin urutan sebelum item yang ordernya 0*/
+}
+
+.social,
+.subscribe {
+  align-self: flex-end; /*ngatur item itu sendiri align kemana*/
+  margin-bottom: 20px; /*biar ga nempel banget sama batas bawah */
+}
+
+.footer {
+  display: flex; /*aktivasi display flex*/
+  justify-content: space-between; /*set item di dalam container ini jadi punya space antar item*/
+}
+
+.footer-item {
+  border:  1px solid white; /* debugging*/
+  background-color: #d6e9fe; /*kasiih warna*/
+  height: 200px; /*tinggi itemnya*/
+  flex: 1;
+}
+
+.footer-three{
+  flex: 2 /*2 berarti ngambil 2 space dari max space yang ada (gabungan tiap item)*/;
+}
+
+.footer-one,
+.footer-three{
+  background-color: #5995da; /*Bedain warna dengan footer-two*/
+  flex: initial; /*set value mengikuti property yang disebutkan sebelumnya*/
+  width: 300px;
+}
+
+.signup{
+  margin-left: auto;
+}
