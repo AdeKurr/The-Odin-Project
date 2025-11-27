@@ -1,39 +1,19 @@
 .flex-container {
-  display: flex; /*Ubah item di dalam element jadi baris horizontal sesuai dengan ukuran item masing masing.*/
+  display: flex; /*untuk mendeklarasikan kalau container ini akan mengandung flex items*/
 }
 
 .flex-container div {
   background: peachpuff;
   border: 4px solid brown;
-  /* mulai flex */
-  /* flex: 1; */
-  /* flex: 1 di atas sama dengan */
-  flex-grow: 1; /*atur perbandingan ukuran untuk grow. Kalo ada 3 item dengan flex-grow: 1 semua, berarti 1 item akan makan 1/3 dari full lebar parentnya.*/
-  flex-shrink: 1; /*atur pecahan ukuran shrink. Baru keliatan kalo containernya lebih sempit dari total lebar itemnya.*/
-  flex-basis: auto; /*atur ukuran awal dari item. MASIH BELUM TAU BEDANYA KALAU VALUE NYA DIUBAH UBAH.*/
-}
-
-.flex-container .content-1,
-.flex-container .content-2,
-.flex-container .content-3 {
-  border: 5px solid green;
-}
-
-.content-1 {
   height: 100px;
-  width: 100px;
+  width: 250px;
+  flex: 1 1 auto;
 }
 
-.content-2 {
-  height: 200px;
-  width: 200px;
+.flex-container .two {
+  flex-shrink: 0;
 }
 
-.content-3 {
-  height: 300px;
-  width: 300px;
-}
-
-h1 {
-  margin: 0;
+.basis.two{
+  flex-basis: 200px; /*Masih tidak mengerti. Tidak ada perubahan.*/
 }

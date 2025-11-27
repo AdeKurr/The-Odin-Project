@@ -7,16 +7,75 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <h1>Growing and Shrinking</h1>
+    <p>
+      Property <em>flex</em> adalah property yang kita sebut dengan
+      <em>shorthand</em> di mana property ini adalah singkatan dari kombinasi
+      beberapa property lain. Dalam kasus ini, flex berarti flex-grow,
+      flex-shrink, dan flex-basis.
+    </p>
+
+    <h2>flex-grow</h2>
+    <p>
+      Flex-grow adalah property yang memerintahkan element untuk melebar
+      (menjadi fleksibel) sesuai perbandingan. Misalkan ada 3 element yang
+      menggunakan <em>flex: 1;</em> maka 3 element itu terbagi menjadi 3 bagian
+      yang sama. Seperti contoh di bawah ini:
+    </p>
     <div class="flex-container">
-      <div class="one">
-        <div class="content-1"><h1>1</h1></div>
-      </div>
-      <div class="two">
-        <div class="content-2"><h1>2</h1></div>
-      </div>
-      <div class="three">
-        <div class="content-3"><h1>3</h1></div>
-      </div>
+      <div class="flex-item">Flex: 1;</div>
+      <div class="flex-item">Flex: 1;</div>
+      <div class="flex-item">Flex: 1;</div>
+    </div>
+    <p>
+      Dari contoh di atas, ketiga kotak div menggunakan flex:1. Namun semisal
+      salah satu div mempunyai flex yang ukurannya lebih besar, maka flex yang
+      valuenya lebih besar akan memakan tempat lebih banyak. sekitar n x total
+      flex=1. Contoh:
+    </p>
+    <div class="flex-container">
+      <div class="one">Flex: 1;</div>
+      <div class="two">Flex: 2;</div>
+      <div class="three">Flex: 1;</div>
+    </div>
+    <p>
+      Bandingkan dengan 4 box berukuran sama di bawah, anda akan dapat melihat
+      bahwa flex:2 memakan 2 kotak yang ukurannya sama.
+    </p>
+    <div class="flex-container">
+      <div class="one">Box 1</div>
+      <div class="one">Box 2</div>
+      <div class="one">Box 3</div>
+      <div class="one">Box 3</div>
+    </div>
+
+    <h2>flex-shrink</h2>
+    <p>
+      flex-shrink adalah property dengan sifat lawan dari flex-grow. Apabila
+      flex-grow berarti menentukan bagaimana suatu element 'tumbuh', flex-shrink
+      menentukan bagaimana element menciut.
+    </p>
+
+    <div class="flex-container">
+      <div class="one">Shrink 1</div>
+      <div class="two">Shrink 2</div>
+      <div class="three">Shrink 3</div>
+    </div>
+
+    <p>
+      Jika zoom-out, div Shrink 2 akan mengikuti ukuran Shrink 1 dan 3 karena
+      mereka semua punya flex-grow: 1 (yang di state di flex:1). Namun ketika
+      kita zoom-in, maka flex-shrink akan terlihat ketika Shrink 2 tidak
+      mengecil ketika mencapai ukuran width yang dinyatakan (250px). Di css
+      disebutkan bahwa flex-basis nya dijadikan auto karena ketika flex-basis:0
+      maka ia tidak akan menghiraukan width nya. Sedangkan kalau auto dia kan
+      mengikuti deklarasi width.
+    </p>
+
+    <div class="flex-container">
+      <div class="basis-one">Basis 1</div>
+      <div class="basis-two">Basis 2</div>
+      <div class="basic-three">Basis 3</div>
     </div>
   </body>
 </html>
