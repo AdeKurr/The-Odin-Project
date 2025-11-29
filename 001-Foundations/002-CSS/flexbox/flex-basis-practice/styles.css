@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  border: 3px solid #7b68ee;
+  margin-bottom: 40px;
+  height: 100px;
+}
+
+.item {
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+.item-short {
+  background: #ff6347; /* Tomat */
+}
+
+.item-long {
+  background: #4682b4; /* Steel Blue */
+}
+
+.keterangan {
+  background: #fffacd;
+  padding: 10px;
+  border: 1px dashed #daa520;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------------- */
+/* KASUS 1: TANPA FLEX BASIS EKSPLISIT (FLEX-BASIS: AUTO) */
+/* ---------------------------------------------------------------- */
+
+.container-auto .item {
+  /* flex-grow: 1, flex-shrink: 1, flex-basis: auto.
+      Basisnya adalah lebar konten, sehingga Item B (panjang) 
+      sudah mendapatkan "head start" yang besar sebelum tumbuh.
+    */
+  flex: 1 1 auto;
+}
+
+/* ---------------------------------------------------------------- */
+/* KASUS 2: DENGAN FLEX BASIS EKSPLISIT (FLEX-BASIS: 0) */
+/* ---------------------------------------------------------------- */
+
+.container-zero .item {
+  /* flex-grow: 1, flex-shrink: 1, flex-basis: 0.
+      Basisnya dipaksa 0, mengabaikan lebar konten. 
+      Kedua item memulai dari 0 dan berbagi SELURUH lebar container secara merata.
+    */
+  flex: 1 1 0;
+}

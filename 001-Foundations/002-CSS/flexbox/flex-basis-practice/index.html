@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bukti Flex Basis</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Perbedaan Flex Basis</h1>
+
+    <div class="keterangan">
+      Semua item punya <code>flex-grow: 1</code>. Lebar akhir harusnya sama,
+      tapi lihat bedanya karena basis yang berbeda!
+    </div>
+
+    <h2>Container 1: Tanpa Flex Basis Eksplisit (Basis: auto)</h2>
+    <div class="container container-auto">
+      <div class="item item-short">Item A</div>
+      <div class="item item-long">
+        Item B dengan konten yang sangat panjang. Sangat panjang sekali.
+      </div>
+    </div>
+
+    <h2>Container 2: Dengan Flex Basis Eksplisit (Basis: 0)</h2>
+    <div class="container container-zero">
+      <div class="item item-short">Item C</div>
+      <div class="item item-long">
+        Item D dengan konten yang sangat panjang. Sangat panjang sekali.
+      </div>
+    </div>
+  </body>
+</html>
