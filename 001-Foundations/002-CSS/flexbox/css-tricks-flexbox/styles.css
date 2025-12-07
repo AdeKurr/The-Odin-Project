@@ -1,0 +1,51 @@
+/* Variables */
+:root {
+  --white-color: rgb(245, 245, 245);
+  --black-color: rgb(33, 33, 33);
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  border: 1px dashed orange;
+}
+
+body {
+  background-color: var(--black-color);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: var(--white-color);
+}
+
+.parent-properties {
+  margin: 20px;
+  border-radius: 5px;
+  background-color: var(--white-color);
+  padding: 10px;
+}
+
+.parent-properties .title {
+  margin: 10px;
+}
+
+.parent-properties .display {
+  display: flex;
+}
+
+.header {
+  margin: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+.flex-container{
+    display: flex;
+    background-color: orange;
+}
