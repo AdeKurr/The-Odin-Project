@@ -1,51 +1,89 @@
 /* Variables */
 :root {
-  --white-color: rgb(245, 245, 245);
-  --black-color: rgb(33, 33, 33);
+  --color-white: rgb(245, 245, 245);
+  --color-black: rgb(33, 33, 33);
+  --color-orange: #ff6b6b;
+  --color-purple: #3a1c71;
 }
 
 * {
   margin: 0;
   border: 0;
   box-sizing: border-box;
-  border: 1px dashed orange;
+  /* border: 1px dashed green; */
+}
+
+html,
+body {
+  /* Ensures the HTML and body tags take up the full screen height */
+  height: 100%;
 }
 
 body {
-  background-color: var(--black-color);
+  background-image: linear-gradient(
+    45deg,
+    var(--color-orange),
+    var(--color-purple)
+  );
+}
+
+p {
+  text-align: justify;
+}
+
+.content {
+  background-color: var(--color-white);
+  width: 75vw;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .title {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 20px;
-  color: var(--white-color);
+  color: var(--color-black);
+}
+
+h1 {
+  text-align: center;
 }
 
 .parent-properties {
-  margin: 20px;
   border-radius: 5px;
-  background-color: var(--white-color);
-  padding: 10px;
-}
-
-.parent-properties .title {
-  margin: 10px;
-}
-
-.parent-properties .display {
-  display: flex;
+  background-color: var(--color-white);
 }
 
 .header {
-  margin: 10px;
-  font-weight: bold;
-  font-style: italic;
+  margin: 10px 0 10px 10px;
+}
+.description {
+  margin-bottom: 5px;
 }
 
+.flex-container {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--color-purple);
+}
 
-.flex-container{
-    display: flex;
-    background-color: orange;
+.not-flex {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: lightgrey;
+}
+
+.uppercase-marker {
+  list-style-type: upper-alpha;
+}
+
+.number-marker{
+  list-style-type: decimal;
+}
+
+ol{
+  padding-inline-start: 20px;
 }

@@ -7,24 +7,64 @@
     <title>CSS-TRICKS FLEXBOX</title>
   </head>
   <body>
-    <div class="title">
-      <h1>CSS Tricks Flexbox</h1>
-      <p>
-        This is a page to practice Flexbox properties based on the guide on
-        css-tricks.com. I will try to make it as interesting and as detailed as
-        the web as possible. Enjoy!
-      </p>
-    </div>
-
-    <div class="parent-properties">
-      <h2>Parent Properties</h2>
-      <p>Here we have the properties of flexbox for the parent (container).</p>
-      <div class="display header">
-        <h3>display</h3>
-        <div class="display content">
-          <div class="flex-container"></div>
+    <div class="content">
+      <div class="title">
+        <h1>CSS Tricks Flexbox</h1>
+        <div class="description">
+          <p>
+            This is a page to practice Flexbox properties based on the guide on
+            css-tricks.com. I will try to make it as interesting and as detailed
+            as the web as possible. Enjoy!
+          </p>
         </div>
       </div>
+      <ol>
+        <li class="uppercase-marker">
+          <div class="parent-properties">
+            <h2>Parent Properties</h2>
+            <div class="description">
+              <p>
+                Here we have the properties of flexbox for the parent
+                (container).
+              </p>
+            </div>
+            <ol>
+              <li class="number-marker">
+                <div class="header">
+                  <h3>display</h3>
+                </div>
+                <div class="description">
+                  <p>
+                    Display is what defines the flex container. With it, the
+                    container becomes flex. On the example below, the purple
+                    rectangle is the flex container, while the grey box is just
+                    a regular container with explicitly defined height and
+                    weight. If you try to resize the screen, the flex container
+                    will change width but not the grey box.
+                  </p>
+                </div>
+                <div class="flex-container">
+                  <div class="not-flex"></div>
+                  <div class="not-flex"></div>
+                  <div class="not-flex"></div>
+                </div>
+              </li>
+              <li>
+                <div class="header">
+                  <h3>flex-direction</h3>
+                </div>
+                <div class="description">
+                  <p>
+                    Flex-direction is the property that manages the direction of
+                    the flex item inside of the container the property is
+                    explicitly stated. Look at the following examples:
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </li>
+      </ol>
     </div>
   </body>
 </html>
