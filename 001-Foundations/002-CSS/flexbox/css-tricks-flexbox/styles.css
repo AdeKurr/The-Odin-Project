@@ -16,7 +16,7 @@
 html,
 body {
   /* Ensures the HTML and body tags take up the full screen height */
-  height: 100%;
+  height: auto;
 }
 
 body {
@@ -25,6 +25,11 @@ body {
     var(--color-orange),
     var(--color-purple)
   );
+  margin: 0;
+  /* 2. Set min-height instead of height */
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover; /* Stretches the gradient to fill the space */
 }
 
 p {
@@ -39,6 +44,7 @@ p {
   margin-bottom: 10px;
   padding: 40px;
   border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .title {
@@ -70,7 +76,7 @@ h1 {
 
 .not-flex {
   height: 50px;
-  width: 200px;
+  width: 100px;
   border-radius: 5px;
   margin-right: 5px;
   background-color: lightgrey;
@@ -80,10 +86,39 @@ h1 {
   list-style-type: upper-alpha;
 }
 
-.number-marker{
+.number-marker {
   list-style-type: decimal;
 }
 
-ol{
+ol {
   padding-inline-start: 20px;
+}
+
+.lowercase-marker {
+  list-style-type: lower-alpha;
+}
+.direction-row {
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.direction-row-reverse {
+  flex-direction: row-reverse;
+  margin-bottom: 10px;
+}
+.direction-column {
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.direction-column .not-flex {
+  margin-bottom: 5px;
+}
+
+.direction-column-reverse {
+  flex-direction: column-reverse;
+  margin-bottom: 10px;
+}
+
+.direction-column-reverse .not-flex {
+  margin-bottom: 5px;
 }
