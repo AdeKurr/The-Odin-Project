@@ -74,7 +74,15 @@ h1 {
   background-color: var(--color-purple);
 }
 
-.not-flex {
+.not-flex-container {
+  display: block;
+  width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--color-purple);
+}
+
+.item {
   height: 50px;
   width: 100px;
   border-radius: 5px;
@@ -110,7 +118,7 @@ ol {
   margin-bottom: 10px;
 }
 
-.direction-column .not-flex {
+.direction-column .item {
   margin-bottom: 5px;
 }
 
@@ -119,6 +127,20 @@ ol {
   margin-bottom: 10px;
 }
 
-.direction-column-reverse .not-flex {
+.direction-column-reverse .item {
   margin-bottom: 5px;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.not-flex-wrap {
+  flex-wrap: nowrap;
+}
+
+.container {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--color-purple);
+  width: 500px;
 }
